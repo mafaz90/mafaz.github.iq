@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bio hazard cloud</title>
+        
+	</script>
+	<style>
+		.IO_box {
+			float: left;
+			margin: 0 20px 20px 0;
+			border: 1px solid blue;
+			padding: 0 5px 0 5px;
+			width: 120px;
+		}
+		h1 {
+			font-size: 120%;
+			color: blue;
+			margin: 0 0 10px 0;
+		}
+		h2 {
+			font-size: 85%;
+			color: #5734E6;
+			margin: 5px 0 5px 0;
+		}
+		p, form, button {
+			font-size: 80%;
+			color: #252525;
+		}
+		.small_text {
+			font-size: 70%;
+			color: #737373;
+		}
+	</style>
+    </head>
+    <body onload="GetArduinoIO()">
+        <h1>Bio hazard cloud</h1>
+        <div class="IO_box">
+			<h2>Analog Inputs</h2>
+			<p class="small_text">A0 by Gas sensor 1 for CO MQ-7</p>
+			<p class="small_text">A1 by Gas sensor 2 for H2 MQ-8</p>
+			<p class="small_text">A1 by Gas sensor 3 for O2 and smoke MQ-2</p>
+			
+		</div>
+		<div class="IO_box">
+			<h2>internal decision </h2>
+			<p class="small_text">decision 1: less O2</p>
+			<p class="small_text">decision 2: normal O2</p>
+			<p class="small_text">decision 3: high CO</p>
+			<p class="small_text">decision 4: normal CO</p>
+			<p class="small_text">decision 5: high pollution high CO ,less O2 </p>
+			
+		</div>
+		<div class="IO_box">
+			<h2>LEDs Using Checkboxes</h2>
+			<form id="check_LEDs" name="LED_form">
+				<input type="checkbox" name="LED1" value="0" onclick="GetCheck()" />LED 1 normal<br /><br />
+				<input type="checkbox" name="LED2" value="0" onclick="GetCheck()" />LED 2 hazard<br /><br />
+			</form>
+		</div>
+		
+    </body>
+</html>
+
+
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>sensor</th>
+    <th>reading per 1000000 molecular</th>
+    <th>decision</th>
+  </tr>
+  <tr>
+    <td>CO MQ-7</td>
+    <td>263</td>
+    <td>normal</td>
+  </tr>
+  <tr>
+    <td>H2 MQ-8</td>
+    <td>325</td>
+    <td>normal</td>
+  </tr>
+  <tr>
+    <td>O2 and smoke MQ-2</td>
+    <td>170</td>
+    <td>normal</td>
+  </tr>
+  <tr>
+    <td>CO MQ-7 other reading</td>
+    <td>610</td>
+    <td>hazard</td>
+  </tr>
+  <tr>
+    <td>H2 MQ-8 other reading</td>
+    <td>850</td>
+    <td>hazard</td>
+  </tr>
+  <tr>
+    <td>O2 and smoke MQ-2 other reading </td>
+    <td>320</td>
+    <td>hazard</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
